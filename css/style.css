@@ -1,0 +1,146 @@
+/* 🔥 Ajuste general para eliminar espacios innecesarios y mejorar alineación */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 60px; /* Espacio para navbar fixed-top */
+    line-height: 1.6;
+    text-align: center;
+  }
+  
+  /* Secciones con menos espacio sin perder estética */
+  section {
+    padding: 50px 3%; /* Reduce los márgenes laterales */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* 🔥 Ajustar Navbar para evitar que cubra secciones */
+  .navbar {
+    padding: 8px 15px;
+  }
+  
+  /* 🔥 Ajustar alineación de elementos en filas */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Reduce espacio entre elementos */
+  }
+  
+  /* 🔥 Asegurar que todas las columnas tengan el mismo tamaño */
+  .col-md-3, .col-md-6, .col-md-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px; /* Reduce espacio vacío */
+    margin-bottom: 15px; /* Ajusta separación entre elementos */
+  }
+  
+  /* 🔥 Unificar tamaños de imágenes 🔥 */
+  #habilidades img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 8px;
+  }
+  
+  #frameworks img {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 8px;
+  }
+  
+  /* 🔥 PROYECTOS - Ahora están más juntos y más grandes 🔥 */
+  #portafolio .row {
+    flex-wrap: nowrap;  /* Mantiene los proyectos en una sola línea */
+    justify-content: space-between;
+    gap: 5px; /* Reduce el espacio entre los proyectos */
+  }
+  
+  #portafolio .col-md-4 {
+    flex: 1;
+    max-width: 32%; /* Aumenta el tamaño de los proyectos */
+  }
+  
+  #portafolio .card {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+  
+  #portafolio .card-img-top {
+    width: 100%;
+    height: 180px; /* Aumenta el tamaño de las imágenes */
+    object-fit: contain;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  
+  /* 🔥 Asegurar que las barras de progreso estén alineadas */
+  .progress {
+    width: 85%;
+    margin: 5px auto;
+  }
+  
+  /* 🔥 Contacto */
+  #contacto img {
+    border: 4px solid #fff;
+    width: 140px;
+    height: auto;
+  }
+  
+  /* 🔥 RESPONSIVIDAD 🔥 */
+  @media (max-width: 992px) {
+    section {
+      padding: 30px 5%;
+    }
+  
+    #portafolio .row {
+      flex-wrap: wrap; /* Permitir que los proyectos se acomoden en pantallas medianas */
+    }
+  
+    #portafolio .col-md-4 {
+      max-width: 48%; /* 2 proyectos por fila en pantallas medianas */
+    }
+  
+    #portafolio .card-img-top {
+      height: 150px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #portafolio .col-md-4 {
+      max-width: 100%; /* 1 proyecto por fila en pantallas pequeñas */
+    }
+  
+    #portafolio .card-img-top {
+      height: 130px;
+    }
+  
+    #habilidades img, #frameworks img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #inicio h1 {
+      font-size: 1.8rem;
+    }
+  
+    #contacto img {
+      width: 120px;
+    }
+  
+    #portafolio .card-img-top {
+      height: 100px;
+    }
+  }
+  
